@@ -1,6 +1,4 @@
 let table = document.querySelector(".table");
-(
-    async () => {
         let workbook = XLSX.read(await (await fetch("PokeTCG.xlsx")).arrayBuffer());
         console.log(workbook);
         let worksheet = workbook.SheetNames;
@@ -10,5 +8,4 @@ let table = document.querySelector(".table");
                     <h3>${name}</h3>${html}
                     `;
         })
-    }
-)()
+    
